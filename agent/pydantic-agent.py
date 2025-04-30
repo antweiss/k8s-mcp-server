@@ -16,7 +16,7 @@ server = MCPServerStdio(
         '-i',
         '-v',
         f'{os.path.expanduser("~")}/.kube:/home/appuser/.kube:ro',
-        'k8s-mcp-server:latest'
+        'ghcr.io/alexei-led/k8s-mcp-server:latest'
     ]
 )
 
