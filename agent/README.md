@@ -2,7 +2,7 @@
 
 This script (`pydantic-agent.py`) is a command-line interface agent built using the `pydantic-ai` library.
 
-Its primary function is to act as a Kubernetes operations assistant. It leverages a large language model (configured to run on a local [Ollama](https://ollama.com/) instance) to understand user requests related to Kubernetes. The specific model is defined by an environment variable OLLMA_MODEL_NAME.
+Its primary function is to act as a Kubernetes operations assistant. It leverages a large language model (configured to run on a local [Ollama](https://ollama.com/) instance) to understand user requests related to Kubernetes. The specific model is defined by an environment variable OLLAMA_MODEL_NAME.
 
 The agent interacts with a Kubernetes cluster through a Model Context Protocol (MCP) server. This server is set up to run within a Docker container (`k8s-mcp-server:latest`) and is configured to execute Kubernetes commands via a tool named `execute_kubectl`. The agent is specifically instructed via its system prompt to use this MCP tool for all Kubernetes interactions, rather than suggesting direct `kubectl` commands.
 
